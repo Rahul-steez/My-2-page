@@ -1,0 +1,56 @@
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        
+        <button type="button" class="btn btn-secondary" (click)="changeCategory('create')">Crear Evento</button>
+        <button type="button" class="btn btn-secondary" (click)="changeCategory('Small Images')">Modificar Evento</button>
+        <button type="button" class="btn btn-secondary" (click)="changeCategory('Middle Images')">Eliminar Evento</button>
+      </div>
+
+      <h1>Mi Evento</h1>
+        <app-component-mostrar></app-component-mostrar>
+          
+
+    </div>
+  </div>
+</div>
+
+  <div *ngIf="category === 'create'" style="margin-top: 5em;" style="margin-left: 1em;" >
+      <div class="card" style="width: 40rem;">
+        <h1>Crear Eventos</h1>
+        <form action="ejemplo.php" method="get">
+          <p>Nombre y lugar de el evento : <input type="text" name="evento" size="40"></p>
+          <p>Correo-Electronico : <input type="text" name="correo" min="1900"></p>
+          <p>Texto sobre el evento : <input type="text" name="texto" min="1900"></p>
+          <p id ="acuerdos">Al hacer clic en Registrarte, aceptas nuestras Condiciones. Obtén más información sobre cómo recopilamos, 
+            usamos y compartimos tu información en la Política de datos, así como el uso que hacemos de las cookies y 
+            tecnologías similares en nuestra Política de cookies.
+             Es posible que te enviemos notificaciones por SMS que podrás desactivar cuando quieras.
+            <input type="checkbox" name="hm" value="h"></p>
+            <button id= "button" type="button" >Crear Evento</button>
+        </form>
+        </div>
+      </div>
+
+
+
+      <div *ngIf="category === 'create'" style="margin-top: 5em;" style="margin-left: 1em;" >
+        <div class="card" style="width: 40rem;">
+          <h1>Crear Eventos</h1>
+          <form action="ejemplo.php" method="get">
+            <p>Nombre y lugar de el evento : <input type="text" name="evento" size="40"></p>
+            <p>Correo-Electronico : <input type="text" name="correo" min="1900"></p>
+            <p>Texto sobre el evento : <input type="text" name="texto" min="1900"></p>
+            <p id ="acuerdos">Al hacer clic en Registrarte, aceptas nuestras Condiciones. Obtén más información sobre cómo recopilamos, 
+              usamos y compartimos tu información en la Política de datos, así como el uso que hacemos de las cookies y 
+              tecnologías similares en nuestra Política de cookies.
+               Es posible que te enviemos notificaciones por SMS que podrás desactivar cuando quieras.
+              <input type="checkbox" name="hm" value="h"></p>
+              <button id= "button" type="button" >Crear Evento</button>
+          </form>
+          </div>
+        </div>
+</body>
